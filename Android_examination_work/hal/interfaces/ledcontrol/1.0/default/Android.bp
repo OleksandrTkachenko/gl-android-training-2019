@@ -1,0 +1,21 @@
+//
+// Copyright (C) 2019 Globallogic Inc
+// All rights reserved.
+//
+cc_binary {
+    name: "vendor.gl.ledcontrol@1.0-service.hikey960",
+    init_rc: ["vendor.gl.ledcontrol@1.0-service.hikey960.rc"],
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [
+        "service.cpp",
+        "LedControl.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "liblog",
+        "vendor.gl.ledcontrol@1.0",
+    ],
+}

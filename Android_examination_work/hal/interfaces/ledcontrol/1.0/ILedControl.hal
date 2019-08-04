@@ -1,0 +1,17 @@
+/*
+ * Globallogic Inc. 2019 All rights reserved
+ */
+
+package vendor.gl.ledcontrol@1.0;
+
+/**
+ * ILedControl interface
+ */
+interface ILedControl {
+    /**
+     * Led Control setLedState
+     *
+     * @return result 0 if successful, nonzero otherwise.
+     */
+    setLedState(Leds led, LedState state) generates (int32_t result);
+};

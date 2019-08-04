@@ -1,0 +1,26 @@
+#
+# COPYRIGHT (C) 2019 GLOBALLOGIC INC
+# ALL RIGHTS RESERVED
+#
+
+
+service gl.ledcontrol-1-0 /system/vendor/bin/hw/vendor.gl.ledcontrol@1.0-service.hikey960
+    interface vendor.gl.ledcontrol@1.0::ILedControl default
+    class hal
+    user vendor_led_control
+    group vendor_led_control
+    # will not be restarted if it exists unitl it is requested to be restarted
+    oneshot
+    # will only be started when requested
+    disabled
+
+#on post-fs-data
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led1/trigger
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led1/brightness
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led2/trigger
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led2/brightness
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led3/trigger
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led3/brightness
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led4/trigger
+#    chown vendor_vendor_led_control vendor_led_control /sys/class/leds/user_led4/brightness
+
