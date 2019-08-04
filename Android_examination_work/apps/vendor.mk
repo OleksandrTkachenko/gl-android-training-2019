@@ -1,1 +1,2 @@
-PRODUCT_PACKAGES += LedControlSrvc
+PRODUCT_PACKAGES += LedControlSrvc \
+                    LedControl
